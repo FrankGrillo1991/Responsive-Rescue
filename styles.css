@@ -65,7 +65,8 @@ nav li a:hover, nav li a:focus {
 img{
     max-width:100%;
     height:auto;
-    display:block}
+    display:block
+}
 @media (max-width: 1024px){
     .row{
         grid-template-columns: repeat(2,1fr);
@@ -75,4 +76,13 @@ img{
     .row{
         grid-template-columns: 1fr;
     } body{font-size:18px}
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    .row {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
