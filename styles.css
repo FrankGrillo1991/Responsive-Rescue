@@ -48,6 +48,13 @@ nav#main-nav.open {
     display: block;
 }
 
+footer.site-footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--bg);
+    border-top: 1px solid #242b52;
+}
+
 @media (min-width: 769px) {
     .nav-toggle {
         display: none;
