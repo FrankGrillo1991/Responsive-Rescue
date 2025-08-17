@@ -10,7 +10,10 @@ body{
     text-align:center;
     position: sticky;
     top: 0;
+    z-index: 1000;
+    background: var(--bg);
     box-shadow: 0 2px 8px 0 rgba(0,0,0,0.07), 0 1.5px 3px 0 rgba(0,0,0,0.03);
+    border-bottom: 1px solid #242b52;
 }
 
 nav {
