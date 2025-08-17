@@ -87,6 +87,7 @@ nav {
     align-items: center;
     background: var(--bg);
     padding: 0.75rem 0;
+    width: 100%;
 }
 
 nav ul {
@@ -139,6 +140,9 @@ img{
     display:block
 }
 @media (min-width: 769px) {
+    nav {
+        justify-content: center;
+    }
     nav ul {
         flex-direction: row;
         gap: 1.5rem;
