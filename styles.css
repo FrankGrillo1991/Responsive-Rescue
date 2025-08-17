@@ -18,6 +18,8 @@ nav {
     justify-content: center;
     align-items: center;
     background: var(--bg);
+    gap: 1.5rem;
+    padding: 0.75rem 0;
 }
 
 nav li a{
@@ -25,7 +27,14 @@ nav li a{
     color:var(--fg);
     text-decoration:none;
     font-weight:500;
-    padding:0.5rem 1rem;
+    padding:0.5rem 1.25rem;
+    border-radius: 0.5rem;
+    transition: background 0.2s;
+}
+
+nav li a:hover, nav li a:focus {
+    background: rgba(234, 240, 255, 0.08);
+    color: #fff;
 }
 
 .row{display:grid;
