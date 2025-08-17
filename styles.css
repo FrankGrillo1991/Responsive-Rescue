@@ -22,7 +22,7 @@ nav {
     padding: 0.75rem 0;
 }
 
-nav li a{
+nav ul li a{
     list-style: none;
     color:var(--fg);
     text-decoration:none;
