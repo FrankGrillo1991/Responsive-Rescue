@@ -1,3 +1,61 @@
+/* Hamburger button styles */
+.nav-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+    margin: 0 auto 0 0;
+}
+.nav-toggle:focus {
+    outline: 2px solid #7ec4ff;
+}
+.hamburger {
+    width: 28px;
+    height: 3px;
+    background: var(--fg);
+    border-radius: 2px;
+    position: relative;
+    transition: all 0.3s;
+}
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 3px;
+    background: var(--fg);
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+.hamburger::before {
+    top: -9px;
+}
+.hamburger::after {
+    top: 9px;
+}
+
+/* Hide nav by default on mobile */
+nav#main-nav {
+    display: none;
+}
+nav#main-nav.open {
+    display: block;
+}
+
+@media (min-width: 769px) {
+    .nav-toggle {
+        display: none;
+    }
+    nav#main-nav {
+        display: block !important;
+    }
+}
 /* Focus outlines for accessibility */
 a:focus, button:focus, input:focus, select:focus, textarea:focus {
     outline: 2px solid #7ec4ff;
@@ -33,11 +91,17 @@ nav {
 
 nav ul {
     display: flex;
-    gap: 1.5rem;
+    flex-direction: column;
+    gap: 0.5rem;
     margin: 0;
     padding: 0;
     list-style: none;
-    align-items: center;
+    align-items: stretch;
+    width: 100%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
 }
 
 nav ul li a{
@@ -74,22 +138,31 @@ img{
     height:auto;
     display:block
 }
+@media (min-width: 769px) {
+    nav ul {
+        flex-direction: row;
+        gap: 1.5rem;
+        align-items: center;
+        width: auto;
+        max-width: none;
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
 @media (max-width: 1024px){
     .row{
         grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width: 768px) {
+    .row {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 @media (max-width: 640px){
     .row{
         grid-template-columns: 1fr;
     } body{font-size:18px}
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-    .row {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
