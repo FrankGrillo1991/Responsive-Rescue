@@ -176,5 +176,5 @@ img{
 @media (max-width: 640px){
     .row{
         grid-template-columns: 1fr;
-    } body{font-size:18px}
+    } 
 }
